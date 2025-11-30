@@ -10,20 +10,16 @@
   <meta property="og:title" content="Mayus Alaro - All Reviews | 942+ Client Testimonials">
   <meta property="og:description" content="Read all 942+ genuine client reviews for Mayus Alaro, top-rated Shopify expert and digital marketing specialist.">
   <meta property="og:image" content="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg">
-  <meta property="og:url" content="https://mayusalaro.com/full-reviews.html">
+  <meta property="og:url" content="https://mayusalaro.com/full-reviews">
   <meta name="twitter:card" content="summary_large_image">
 
-   
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-
-   
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
- 
-   <!-- Favicon -->
-    <link rel="icon" href="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" type="image/x-icon">
 
-   
+  <!-- Favicon -->
+  <link rel="icon" href="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" type="image/x-icon">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -44,11 +40,8 @@
   </script>
     
   <style>
-    /* small enhancement for star row */
     .stars-row i { margin-right: 2px; }
-    /* tiny card image aspect */
     .gig-thumb { width: 72px; height: 48px; object-fit: cover; border-radius: 6px; }
-    /* repeated client badge styling */
     .repeated-client-badge {
       background: linear-gradient(135deg, #FFD700, #FFA500);
       color: #333;
@@ -58,20 +51,70 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    /* New review card structure for better responsive layout */
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .review-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .review-user-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .review-user-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
+    }
+    .review-user-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+    .review-rating {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: #000;
+      font-size: 14px;
+    }
+    .review-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .review-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .review-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
     }
   </style>
-  
 </head>
 <body class="bg-white text-black antialiased font-sans">
 
-   
   <div class="w-full h-48 md:h-64 bg-gray-200"> 
     <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758613523/203831-removebg-preview_tlrrs1.png" alt="Cover Image" class="w-full h-full object-cover bg-gray-100">
   </div>
   
-   
   <div class="container mx-auto px-4 md:grid md:grid-cols-12 md:gap-8 relative md:mt-8">
-     
     <div class="md:col-span-3 relative md:sticky md:top-4 md:self-start">
       <div class="absolute -top-16 left-0 md:static md:top-0"> 
         <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
@@ -81,7 +124,7 @@
         <div class="flex items-center text-sm">
           <i class="ri-star-fill text-black"></i>
           <span class="ml-1 text-black">5.0</span>
-          <a href="reviews.html" class="ml-1 text-gray-600">(942)</a>
+          <a href="/reviews" class="ml-1 text-gray-600">(942)</a>
           <span class="ml-2 bg-pink/10 text-pink px-2 py-1 rounded-full flex items-center text-xs">
             <i class="ri-award-fill mr-1"></i> Top Rated Expert
           </span>
@@ -89,7 +132,7 @@
         <p class="text-heading font-medium">He'll Bring Your Idea Into Reality!</p>
         <div class="flex items-center text-sm text-gray-600 mt-2">
           <i class="ri-map-pin-line mr-1"></i> United States
-          <i class="ri-global-line ml-4 mr-1"></i> English, Yoruba
+          <i class="ri-global-line ml-4 mr-1"></i> English, Spanish
         </div>
         
         <div class="hidden md:block mt-6">
@@ -101,20 +144,16 @@
       </div>
     </div>
 
-      
     <div class="md:col-span-9 mt-4 md:mt-0">
-        
       <div class="flex overflow-x-auto space-x-6 md:space-x-8 text-heading font-medium text-sm md:text-base whitespace-nowrap border-b border-gray-200 pb-4">
         <a href="index.html#about" class="hover:text-hover transition-colors">About</a>
-        <a href="services.html" class="hover:text-hover transition-colors">Services</a>
-        <a href="reviews.html" class="hover:text-hover transition-colors">Reviews</a>
-        <a href="portfolio.html" class="hover:text-hover transition-colors">Portfolio</a>
-        <a href="contact.html" class="hover:text-hover transition-colors">Contact</a>
+        <a href="/services" class="hover:text-hover transition-colors">Services</a>
+        <a href="/reviews" class="hover:text-hover transition-colors">Reviews</a>
+        <a href="/portfolio" class="hover:text-hover transition-colors">Portfolio</a>
+        <a href="/contact" class="hover:text-hover transition-colors">Contact</a>
       </div>
 
-       
       <section class="mt-8 md:flex md:gap-8">
-         
         <div class="md:w-1/2">
           <h2 class="text-xl md:text-2xl font-bold text-heading">All 942 Reviews</h2>
 
@@ -166,7 +205,6 @@
             </div>
           </div>
 
-           
           <div class="mt-6 text-sm space-y-2">
             <div class="flex justify-between"><span>Seller communication level</span> <span class="text-black"><i class="ri-star-fill"></i> 5</span></div>
             <div class="flex justify-between"><span>Quality of delivery</span> <span class="text-black"><i class="ri-star-fill"></i> 5</span></div>
@@ -174,14 +212,12 @@
           </div>
         </div>
 
-         
         <div class="md:w-1/2 mt-6 md:mt-0">
           <h3 class="text-lg font-semibold text-heading mb-3">Featured Reviews</h3>
 
           <div class="swiper featured-swiper">
             <div class="swiper-wrapper">
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -206,16 +242,10 @@
                     Working with Mayus has been an absolute game-changer for my business. His expertise in marketing strategy, Google Ads and Meta campaigns is unmatched...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609405/IMG-20250921-WA0043_pdhfii.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$400-$600 • 5 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$400-$600 • 5 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -237,19 +267,13 @@
                   </div>
 
                   <p class="mt-3 text-gray-700 text-sm">
-                    Mr. Gideon did an excellent job setting up my Facebook and Instagram Shops and creating a high-quality campaign...
+                    Mayus did an excellent job setting up my Facebook and Instagram Shops and creating a high-quality campaign...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609506/IMG-20250921-WA0092_ieopxm.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$100-$200 • 7 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$100-$200 • 7 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -274,16 +298,10 @@
                     Excellent communication, fast delivery and clear steps. The campaigns improved conversions quickly...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609504/IMG-20250921-WA0090_g6lmty.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$250 • 3 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$250 • 3 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -308,16 +326,10 @@
                     Mayus transformed our tech startup's online presence completely. The Shopify store he built is lightning fast and converts amazingly well...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609395/IMG-20250921-WA0036_pd32aq.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$550 • 8 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$550 • 8 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -342,16 +354,10 @@
                     Perfect work on my beauty brand store! The design is elegant and the checkout process is seamless. Sales increased by 300% in the first month...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609402/IMG-20250921-WA0039_htnlsc.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$320 • 6 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$320 • 6 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -376,16 +382,10 @@
                     Outstanding attention to detail and professional execution. The Google Ads campaigns are performing exceptionally well with great ROI...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609389/IMG-20250921-WA0033_crg1lz.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$480 • 7 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$480 • 7 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -410,16 +410,10 @@
                     Mayus created a beautiful K-beauty store that perfectly captures our brand aesthetic. The mobile experience is flawless and conversions are amazing...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609382/IMG-20250921-WA0029_dcgxl0.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$380 • 5 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$380 • 5 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -444,16 +438,10 @@
                     Exceptional work on our luxury fashion store. The design is sophisticated and the user experience is seamless. Sales have tripled since launch...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609381/IMG-20250921-WA0028_bwhztb.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$650 • 10 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$650 • 10 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -478,16 +466,10 @@
                     Mayus helped me bring my handcrafted products online with a stunning store. The payment integration works perfectly and international shipping is seamless...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609395/IMG-20250921-WA0036_pd32aq.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$290 • 6 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$290 • 6 days</div>
                 </div>
               </div>
 
-               
               <div class="swiper-slide">
                 <div class="bg-white rounded-lg p-4 shadow-md">
                   <div class="flex items-center justify-between">
@@ -512,12 +494,7 @@
                     Perfect execution on our outdoor gear store. The product filtering system is intuitive and the mobile experience is outstanding. Highly recommend...
                   </p>
 
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609402/IMG-20250921-WA0039_htnlsc.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$420 • 7 days</div>
-                    </div>
-                  </div>
+                  <div class="mt-3 text-xs text-gray-500">$420 • 7 days</div>
                 </div>
               </div>
 
@@ -526,39 +503,34 @@
         </div>
       </section>
 
-        
+      <!-- Restructured All Client Reviews section with new card layout -->
       <section class="mt-8">
         <h3 class="text-lg font-semibold text-heading mb-4">All Client Reviews</h3>
 
         <div class="grid grid-cols-1 gap-4" id="reviewsContainer">
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=15" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=15" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">bright_seller</p>
                     <img src="https://flagcdn.com/24x18/gb.png" alt="UK" />
                     <span class="repeated-client-badge">Repeated Client</span>
                   </div>
                   <p class="text-xs text-gray-500">2 weeks ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Great service and clear guidance. Mayus helped me set up my Shopify store from scratch and the results have been fantastic. The store looks professional and converts well. Will definitely hire again for future store builds and marketing campaigns.</p>
+            <p class="text-gray-700">Great service and clear guidance. Mayus helped me set up my Shopify store from scratch and the results have been fantastic. The store looks professional and converts well. Will definitely hire again for future store builds and marketing campaigns.</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609505/IMG-20250921-WA0091_ymtuvy.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$180 • 4 days • Shopify Store Setup</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$180 • 4 days • Shopify Store Setup</div>
               <div class="text-xs text-gray-500">
                 <div class="font-medium text-heading">Seller's Response</div>
                 <div class="mt-1">Thank you for the great review! Looking forward to working together again.</div>
@@ -566,65 +538,53 @@
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=20" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=20" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">eco_stores</p>
                     <img src="https://flagcdn.com/24x18/de.png" alt="Germany" />
                   </div>
                   <p class="text-xs text-gray-500">3 weeks ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Delivered great results, communication was top-notch. The store looks and converts better now. Mayus provided detailed analytics setup and helped optimize our product pages for better SEO performance. Highly professional work!</p>
+            <p class="text-gray-700">Delivered great results, communication was top-notch. The store looks and converts better now. Mayus provided detailed analytics setup and helped optimize our product pages for better SEO performance. Highly professional work!</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609405/IMG-20250921-WA0043_pdhfii.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$320 • 6 days • Store Optimization</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$320 • 6 days • Store Optimization</div>
               <div class="text-xs text-gray-500">Helpful? <a href="#" class="text-gray-700 hover:underline">Yes</a> <span class="mx-2">|</span> <a href="#" class="text-gray-700 hover:underline">No</a></div>
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=47" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=47" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">north_star</p>
                     <img src="https://flagcdn.com/24x18/ca.png" alt="Canada" />
                     <span class="repeated-client-badge">Repeated Client</span>
                   </div>
                   <p class="text-xs text-gray-500">1 month ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Reliable, clear and fast. Delivered everything as promised with screen recordings and documentation. The Facebook Ads campaign setup was perfect and started generating leads immediately. Excellent value for money!</p>
+            <p class="text-gray-700">Reliable, clear and fast. Delivered everything as promised with screen recordings and documentation. The Facebook Ads campaign setup was perfect and started generating leads immediately. Excellent value for money!</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609506/IMG-20250921-WA0092_ieopxm.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$150 • 3 days • Facebook Ads Setup</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$150 • 3 days • Facebook Ads Setup</div>
               <div class="text-xs text-gray-500">
                 <div class="font-medium text-heading">Seller's Response</div>
                 <div class="mt-1">Thanks for the feedback! Happy to help with your marketing success.</div>
@@ -632,64 +592,52 @@
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=25" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=25" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">aussie_entrepreneur</p>
                     <img src="https://flagcdn.com/24x18/au.png" alt="Australia" />
                   </div>
                   <p class="text-xs text-gray-500">1 month ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Outstanding work on my dropshipping store! Mayus set up everything perfectly - from product research to supplier integration. The store design is clean and professional. Sales started coming in within the first week. Couldn't be happier with the results!</p>
+            <p class="text-gray-700">Outstanding work on my dropshipping store! Mayus set up everything perfectly - from product research to supplier integration. The store design is clean and professional. Sales started coming in within the first week. Couldn't be happier with the results!</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609504/IMG-20250921-WA0090_g6lmty.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$450 • 7 days • Dropshipping Store</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$450 • 7 days • Dropshipping Store</div>
               <div class="text-xs text-gray-500">Helpful? <a href="#" class="text-gray-700 hover:underline">Yes</a> <span class="mx-2">|</span> <a href="#" class="text-gray-700 hover:underline">No</a></div>
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=33" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=33" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">tokyo_fashion</p>
                     <img src="https://flagcdn.com/24x18/jp.png" alt="Japan" />
                   </div>
                   <p class="text-xs text-gray-500">2 months ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Mayus helped me launch my fashion brand online with a beautiful Shopify store. The design perfectly captures our brand aesthetic and the checkout process is smooth. He also set up our email marketing automation which has been generating great results. Highly recommended!</p>
+            <p class="text-gray-700">Mayus helped me launch my fashion brand online with a beautiful Shopify store. The design perfectly captures our brand aesthetic and the checkout process is smooth. He also set up our email marketing automation which has been generating great results. Highly recommended!</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609405/IMG-20250921-WA0043_pdhfii.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$380 • 5 days • Fashion Store Build</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$380 • 5 days • Fashion Store Build</div>
               <div class="text-xs text-gray-500">
                 <div class="font-medium text-heading">Seller's Response</div>
                 <div class="mt-1">Thank you! Your fashion brand has great potential. Wishing you continued success!</div>
@@ -697,65 +645,53 @@
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=40" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=40" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">nordic_wellness</p>
                     <img src="https://flagcdn.com/24x18/se.png" alt="Sweden" />
                     <span class="repeated-client-badge">Repeated Client</span>
                   </div>
                   <p class="text-xs text-gray-500">2 months ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Exceptional service! Mayus built our wellness product store and integrated it with our existing systems seamlessly. The Google Ads campaigns he set up have been consistently profitable. His attention to detail and follow-up support is outstanding.</p>
+            <p class="text-gray-700">Exceptional service! Mayus built our wellness product store and integrated it with our existing systems seamlessly. The Google Ads campaigns he set up have been consistently profitable. His attention to detail and follow-up support is outstanding.</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609506/IMG-20250921-WA0092_ieopxm.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$290 • 6 days • Wellness Store + Ads</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$290 • 6 days • Wellness Store + Ads</div>
               <div class="text-xs text-gray-500">Helpful? <a href="#" class="text-gray-700 hover:underline">Yes</a> <span class="mx-2">|</span> <a href="#" class="text-gray-700 hover:underline">No</a></div>
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=8" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=8" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">spanish_artisan</p>
                     <img src="https://flagcdn.com/24x18/es.png" alt="Spain" />
                   </div>
                   <p class="text-xs text-gray-500">3 months ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Mayus created a stunning online store for my handmade ceramics business. The product photography integration and inventory management system work flawlessly. International shipping setup was seamless and customer support features are excellent.</p>
+            <p class="text-gray-700">Mayus created a stunning online store for my handmade ceramics business. The product photography integration and inventory management system work flawlessly. International shipping setup was seamless and customer support features are excellent.</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609389/IMG-20250921-WA0033_crg1lz.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$340 • 8 days • Artisan Store Build</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$340 • 8 days • Artisan Store Build</div>
               <div class="text-xs text-gray-500">
                 <div class="font-medium text-heading">Seller's Response</div>
                 <div class="mt-1">Your ceramics are beautiful! Happy to help showcase your artistry online.</div>
@@ -763,65 +699,53 @@
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=12" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=12" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">south_african_gems</p>
                     <img src="https://flagcdn.com/24x18/za.png" alt="South Africa" />
                   </div>
                   <p class="text-xs text-gray-500">3 months ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Perfect execution on our jewelry store! The product zoom functionality and secure payment integration give customers confidence. The Meta Ads campaigns Mayus set up have been driving consistent high-quality traffic and sales.</p>
+            <p class="text-gray-700">Perfect execution on our jewelry store! The product zoom functionality and secure payment integration give customers confidence. The Meta Ads campaigns Mayus set up have been driving consistent high-quality traffic and sales.</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609382/IMG-20250921-WA0029_dcgxl0.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$420 • 9 days • Jewelry Store + Ads</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$420 • 9 days • Jewelry Store + Ads</div>
               <div class="text-xs text-gray-500">Helpful? <a href="#" class="text-gray-700 hover:underline">Yes</a> <span class="mx-2">|</span> <a href="#" class="text-gray-700 hover:underline">No</a></div>
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=30" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=30" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">finnish_tech</p>
                     <img src="https://flagcdn.com/24x18/fi.png" alt="Finland" />
                     <span class="repeated-client-badge">Repeated Client</span>
                   </div>
                   <p class="text-xs text-gray-500">4 months ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Mayus delivered an exceptional B2B e-commerce solution for our tech company. The custom integrations with our ERP system work perfectly and the admin dashboard is intuitive. The Google Ads strategy has generated quality leads consistently.</p>
+            <p class="text-gray-700">Mayus delivered an exceptional B2B e-commerce solution for our tech company. The custom integrations with our ERP system work perfectly and the admin dashboard is intuitive. The Google Ads strategy has generated quality leads consistently.</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609381/IMG-20250921-WA0028_bwhztb.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$750 • 12 days • B2B E-commerce Solution</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$750 • 12 days • B2B E-commerce Solution</div>
               <div class="text-xs text-gray-500">
                 <div class="font-medium text-heading">Seller's Response</div>
                 <div class="mt-1">Thank you for trusting me with your complex project. Great working with your team!</div>
@@ -829,40 +753,33 @@
             </div>
           </article>
 
-           
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=38" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
+          <article class="bg-white rounded-lg p-4 shadow-md review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="https://i.pravatar.cc/60?img=38" alt="avatar" class="w-12 h-12 rounded-full flex-shrink-0" />
+                <div class="review-user-details">
+                  <div class="review-user-meta">
                     <p class="font-medium">belgian_chocolates</p>
                     <img src="https://flagcdn.com/24x18/be.png" alt="Belgium" />
                   </div>
                   <p class="text-xs text-gray-500">4 months ago</p>
+                  <div class="review-rating">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
             </div>
 
-            <p class="mt-3 text-gray-700">Outstanding work on our premium chocolate store! The subscription system integration and temperature-controlled shipping options work flawlessly. The store design perfectly reflects our luxury brand and conversions have exceeded expectations.</p>
+            <p class="text-gray-700">Outstanding work on our premium chocolate store! The subscription system integration and temperature-controlled shipping options work flawlessly. The store design perfectly reflects our luxury brand and conversions have exceeded expectations.</p>
 
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609395/IMG-20250921-WA0036_pd32aq.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$480 • 10 days • Premium Food Store</div>
-              </div>
-
+            <div class="review-footer">
+              <div class="text-xs text-gray-500">$480 • 10 days • Premium Food Store</div>
               <div class="text-xs text-gray-500">Helpful? <a href="#" class="text-gray-700 hover:underline">Yes</a> <span class="mx-2">|</span> <a href="#" class="text-gray-700 hover:underline">No</a></div>
             </div>
           </article>
 
         </div>
 
-         
         <div class="mt-8 text-center">
           <button id="loadMoreBtn" class="bg-accent text-white px-6 py-3 rounded-lg hover:bg-hover transition-colors">
             <i class="ri-refresh-line mr-2"></i> Load More Reviews
@@ -874,7 +791,6 @@
     </div>
   </div>
 
-   
   <div class="container mx-auto px-4 mt-8 md:hidden">
     <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
       <i class="ri-send-plane-fill mr-2"></i> Contact me
@@ -882,16 +798,14 @@
     <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
   </div>
 
-    
   <footer class="mt-12 bg-heading text-white py-8">
     <div class="container mx-auto px-4 text-center">
       <p class="text-sm">&copy; <span id="year"></span> Mayus Alaro. All rights reserved.</p>
     </div>
   </footer>
 
-    
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="js/footer-date.js"></script>
-      <script src="js/full-reviews.js"></script>
+  <script src="../js/footer-date.js"></script>
+  <script src="../js/full-reviews.js"></script>
 </body>
 </html>

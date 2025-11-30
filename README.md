@@ -89,7 +89,7 @@ The website is fully responsive and optimized for:
 ## 🎨 Design Features
 
 ### Color Scheme
-- Professional gradient backgrounds
+- Professional color mix
 - High contrast text for accessibility
 - Consistent brand colors throughout
 
