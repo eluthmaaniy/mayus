@@ -35,268 +35,119 @@
       },
     }
   </script>
-  <style>
-    .video-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-    }
-    .video-modal.active {
-      display: flex;
-    }
-    .video-container {
-      position: relative;
-      width: 90%;
-      max-width: 900px;
-      aspect-ratio: 16/9;
-    }
-    .video-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .close-btn {
-      position: absolute;
-      top: -40px;
-      right: 0;
-      color: white;
-      font-size: 32px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .close-btn:hover {
-      color: #1DBF73;
-    }
-    .play-button {
-      position: absolute;
-      bottom: 4px;
-      right: 4px;
-      width: 48px;
-      height: 48px;
-      background: #1DBF73;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: 3px solid white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-      z-index: 10;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(29, 191, 115, 0.7);
-      }
-      50% {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(29, 191, 115, 0);
-      }
-    }
-    .play-button:hover {
-      background: #0F5533;
-      transform: scale(1.1);
-      animation: none;
-    }
-    .play-button i {
-      color: white;
-      font-size: 20px;
-      margin-left: 2px;
-      animation: playIconPulse 2s infinite;
-    }
-    @keyframes playIconPulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.15);
-      }
-    }
-    .play-button:hover i {
-      animation: none;
-    }
-    @media (min-width: 768px) {
-      .play-button {
-        bottom: 8px;
-        right: 8px;
-      }
-    }
-  </style>
 </head>
 <body class="bg-white text-black antialiased">
   
-<!-- Cover Image -->
-<div class="w-full h-48 md:h-64 bg-gray-200"> 
-  <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758613523/203831-removebg-preview_tlrrs1.png" alt="Cover Image" class="w-full h-full object-cover bg-gray-100">
+<!-- Cover Video -->
+<div class="w-full h-48 md:h-64 bg-gray-200 relative overflow-hidden"> 
+  <iframe 
+    src="https://www.youtube.com/embed/g2gpHLX6WZA?autoplay=1&mute=1&loop=1&playlist=g2gpHLX6WZA&controls=1&rel=0&modestbranding=1" 
+    class="absolute top-0 left-0 w-full h-full"
+    style="border: none; pointer-events: auto;"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+    title="Cover Video">
+  </iframe>
 </div>
   
-<!-- Main Content Grid for Desktop Optimization --> 
-<div class="container mx-auto px-4 md:grid md:grid-cols-12 md:gap-8 relative md:mt-8">
-  <!-- Profile Sidebar (Sticky on Desktop) --> 
-  <div class="md:col-span-3 relative md:sticky md:top-4 md:self-start">
-    <div class="absolute -top-16 left-0 md:static md:top-0"> 
-      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
-      <!-- Play Button -->
-      <div class="play-button" id="playVideoBtn" title="Watch intro video">
-        <i class="ri-play-fill"></i>
-      </div>
-    </div> 
-    <div class="pt-20 md:pt-4"> 
-      <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
-      <div class="flex items-center text-sm">
-        <i class="ri-star-fill text-black"></i>
-        <span class="ml-1 text-black">5.0</span>
-        <a href="/reviews" class="ml-1 text-gray-600">(942)</a>
-        <span class="ml-2 bg-pink/10 text-pink px-2 py-1 rounded-full flex items-center text-xs">
-          <i class="ri-award-fill mr-1"></i> Top Rated Expert
-        </span>
-      </div>
-      <p class="text-heading font-medium">He'll Bring Your Idea Into Reality!</p>
-      <div class="flex items-center text-sm text-gray-600 mt-2">
-        <i class="ri-map-pin-line mr-1"></i> United States
-        <i class="ri-global-line ml-4 mr-1"></i> English
-      </div>
+  <!-- Main Content Grid for Desktop Optimization --> 
+  <div class="container mx-auto px-4 md:grid md:grid-cols-12 md:gap-8 relative md:mt-8">
+     <!-- Profile Sidebar (Sticky on Desktop) --> 
+     <div class="md:col-span-3 relative md:sticky md:top-4 md:self-start">
+        <div class="absolute -top-16 left-0 md:static md:top-0"> 
+          <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
+           </div> 
+           <div class="pt-20 md:pt-4"> 
+             <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
+        <div class="flex items-center text-sm">
+          <i class="ri-star-fill text-black"></i>
+          <span class="ml-1 text-black">5.0</span>
+          <a href="/reviews" class="ml-1 text-gray-600">(942)</a>
+          <span class="ml-2 bg-pink/10 text-pink px-2 py-1 rounded-full flex items-center text-xs">
+            <i class="ri-award-fill mr-1"></i> Top Rated Expert
+          </span>
+        </div>
+        <p class="text-heading font-medium">He'll Bring Your Idea Into Reality!</p>
+        <div class="flex items-center text-sm text-gray-600 mt-2">
+          <i class="ri-map-pin-line mr-1"></i> United States
+          <i class="ri-global-line ml-4 mr-1"></i> English
+        </div>
 
-      <!-- Desktop Contact Button -->
-      <div class="hidden md:block mt-6">
-        <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
-          <i class="ri-send-plane-line mr-2"></i> Contact me
-        </a>
-        <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
+        <!-- Desktop Contact Button -->
+        <div class="hidden md:block mt-6">
+          <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+            <i class="ri-send-plane-line mr-2"></i> Contact me
+          </a>
+          <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Main Content -->
-  <div class="md:col-span-9 mt-4 md:mt-0">
-    <!-- Navigation Links -->
-    <div class="flex overflow-x-auto space-x-6 md:space-x-8 text-heading font-medium text-sm md:text-base whitespace-nowrap border-b border-gray-200 pb-4">
-      <a href="#about" class="hover:text-hover transition-colors">About</a>
-      <a href="/services" class="hover:text-hover transition-colors">Services</a>
-      <a href="/reviews" class="hover:text-hover transition-colors">Reviews</a>
-      <a href="/portfolio" class="hover:text-hover transition-colors">Portfolio</a>
-      <a href="/contact" class="hover:text-hover transition-colors">Contact</a>
-    </div>
+    <!-- Main Content -->
+    <div class="md:col-span-9 mt-4 md:mt-0">
+      <!-- Navigation Links -->
+      <div class="flex overflow-x-auto space-x-6 md:space-x-8 text-heading font-medium text-sm md:text-base whitespace-nowrap border-b border-gray-200 pb-4">
+        <a href="#about" class="hover:text-hover transition-colors">About</a>
+        <a href="/services" class="hover:text-hover transition-colors">Services</a>
+        <a href="/reviews" class="hover:text-hover transition-colors">Reviews</a>
+        <a href="/portfolio" class="hover:text-hover transition-colors">Portfolio</a>
+        <a href="/contact" class="hover:text-hover transition-colors">Contact</a>
+      </div>
 
-    <!-- About Me Section -->
-    <div id="about" class="mt-8">
-      <h2 class="text-xl md:text-2xl font-bold text-heading">About me</h2>
-      <p class="mt-4 text-gray-700" id="bio-synopsis">
-        Hi there, I'm Mayus Alaro. I have years of experience in the eCommerce development and marketing industries, and I am passionate about helping you achieve your business goals.
-        <a href="#" id="read-more-bio" class="text-hover hover:underline">Read more</a>
-      </p>
-      <p class="mt-4 text-gray-700 hidden" id="bio-full">
-        Throughout my career, I have successfully built and optimized 315+ Shopify stores for clients across various industries, helping them increase sales, boost brand visibility, and drive long-term growth. My expertise also extends to marketing strategy, including Facebook and Instagram ads, Google Ads, Email flows, and sales funnels to maximize conversions and business performance.
-      </p>
+      <!-- About Me Section -->
+      <div id="about" class="mt-8">
+        <h2 class="text-xl md:text-2xl font-bold text-heading">About me</h2>
+        <p class="mt-4 text-gray-700" id="bio-synopsis">
+          Hi there, I'm Mayus Alaro. I have years of experience in the eCommerce development and marketing industries, and I am passionate about helping you achieve your business goals.
+          <a href="#" id="read-more-bio" class="text-hover hover:underline">Read more</a>
+        </p>
+        <p class="mt-4 text-gray-700 hidden" id="bio-full">
+          Throughout my career, I have successfully built and optimized 315+ Shopify stores for clients across various industries, helping them increase sales, boost brand visibility, and drive long-term growth. My expertise also extends to marketing strategy, including Facebook and Instagram ads, Google Ads, Email flows, and sales funnels to maximize conversions and business performance.
+        </p>
 
-      <h3 class="mt-8 text-xl font-bold text-heading">Skills</h3>
-      <div class="flex flex-wrap gap-2 mt-4" id="skills-list">
-        <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">TikTok Ads Manager</span>
-        <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Instagram Ads Manager</span>
-        <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Product Listing Expert</span>
-        <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Product Researcher</span>
-        <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Etsy Expert</span>
-        <a href="#" id="show-more-skills" class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading font-bold hover:text-hover">+12</a>
-        <div id="hidden-skills" class="flex flex-wrap gap-2 hidden">
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Etsy Listing Expert</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Google Ad Manager</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Google Merchant Expert</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Facebook Shop Expert</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Dropshipping Expert</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Dropshipping Store Expert</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Store Designer</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Developer</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Marketing Expert</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Social Media Marketer</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Email Marketer</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Facebook Ads Expert</span>
+        <h3 class="mt-8 text-xl font-bold text-heading">Skills</h3>
+        <div class="flex flex-wrap gap-2 mt-4" id="skills-list">
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">TikTok Ads Manager</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Instagram Ads Manager</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Product Listing Expert</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Product Researcher</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Etsy Expert</span>
+          <a href="#" id="show-more-skills" class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading font-bold hover:text-hover">+12</a>
+          <div id="hidden-skills" class="flex flex-wrap gap-2 hidden">
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Etsy Listing Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Google Ad Manager</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Google Merchant Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Facebook Shop Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Dropshipping Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Dropshipping Store Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Store Designer</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Developer</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Marketing Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Social Media Marketer</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Email Marketer</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Facebook Ads Expert</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Mobile Contact Button -->
-<div class="container mx-auto px-4 mt-8 md:hidden">
-  <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
-    <i class="ri-send-plane-fill mr-2"></i> Contact me
-  </a>
-  <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
-</div>
-
-<!-- Video Modal -->
-<div class="video-modal" id="videoModal">
-  <div class="video-container">
-    <button class="close-btn" id="closeVideoBtn">
-      <i class="ri-close-line"></i>
-    </button>
-    <div id="videoPlayer"></div>
+  <!-- Mobile Contact Button -->
+  <div class="container mx-auto px-4 mt-8 md:hidden">
+    <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
+      <i class="ri-send-plane-fill mr-2"></i> Contact me
+    </a>
+    <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
   </div>
-</div>
 
-<!-- Footer -->
-<footer class="mt-12 bg-heading text-white py-8">
-  <div class="container mx-auto px-4 text-center">
-    <p class="text-sm">&copy; <span id="year"></span> Mayus Alaro. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="mt-12 bg-heading text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">&copy; <span id="year"></span> Mayus Alaro. All rights reserved.</p>
+    </div>
+  </footer>
 
-<script>
-  // Video Modal functionality
-  const playBtn = document.getElementById('playVideoBtn');
-  const modal = document.getElementById('videoModal');
-  const closeBtn = document.getElementById('closeVideoBtn');
-  const videoPlayer = document.getElementById('videoPlayer');
-
-  playBtn.addEventListener('click', () => {
-    // Create iframe with autoplay and sound enabled
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube.com/embed/g2gpHLX6WZA?autoplay=1&mute=0&controls=1&rel=0';
-    iframe.allow = 'autoplay; encrypted-media';
-    iframe.allowFullscreen = true;
-    videoPlayer.appendChild(iframe);
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  });
-
-  function closeModal() {
-    modal.classList.remove('active');
-    videoPlayer.innerHTML = '';
-    document.body.style.overflow = 'auto';
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-  
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
-
-</script>
-
-<script src="js/main.js"></script>
-<script src="js/footer-date.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/footer-date.js"></script>
 </body>
 </html>
