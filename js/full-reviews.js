@@ -409,7 +409,7 @@ const additionalReviews = [
     hasResponse: false,
   },
   {
-    avatar: "https://i.pravatar.cc/60?img=71",
+    avatar: "https://i.pravatar.cc/60",
     username: "filipino_crafts",
     country: "Philippines",
     flag: "https://flagcdn.com/24x18/ph.png",
