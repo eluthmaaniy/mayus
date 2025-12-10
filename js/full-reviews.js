@@ -423,7 +423,7 @@ const additionalReviews = [
     response: "Filipino craftsmanship deserves global recognition. Thank you for this opportunity!",
   },
   {
-    avatar: "https://i.pravatar.cc/60?img=72",
+    avatar: "https://i.pravatar.cc/60",
     username: "romanian_honey",
     country: "Romania",
     flag: "https://flagcdn.com/24x18/ro.png",
@@ -436,7 +436,7 @@ const additionalReviews = [
     hasResponse: false,
   },
   {
-    avatar: "https://i.pravatar.cc/60?img=73",
+    avatar: "https://i.pravatar.cc/60",
     username: "argentinian_leather",
     country: "Argentina",
     flag: "https://flagcdn.com/24x18/ar.png",
@@ -450,7 +450,7 @@ const additionalReviews = [
     response: "Argentinian leather quality is unmatched. Proud to showcase it!",
   },
   {
-    avatar: "https://i.pravatar.cc/60?img=74",
+    avatar: "https://i.pravatar.cc/60",
     username: "croatian_olive",
     country: "Croatia",
     flag: "https://flagcdn.com/24x18/hr.png",
@@ -463,7 +463,7 @@ const additionalReviews = [
     hasResponse: false,
   },
   {
-    avatar: "https://i.pravatar.cc/60?img=75",
+    avatar: "https://i.pravatar.cc/60",
     username: "bulgarian_rose",
     country: "Bulgaria",
     flag: "https://flagcdn.com/24x18/bg.png",
@@ -477,7 +477,7 @@ const additionalReviews = [
     response: "Bulgarian rose products are legendary. Happy to help share them globally!",
   },
   {
-    avatar: "https://i.pravatar.cc/60?img=76",
+    avatar: "https://i.pravatar.cc/60",
     username: "maltese_crafts",
     country: "Malta",
     flag: "https://flagcdn.com/24x18/mt.png",
@@ -490,7 +490,7 @@ const additionalReviews = [
     hasResponse: false,
   },
   {
-    avatar: "https://i.pravatar.cc/60?img=77",
+    avatar: "https://i.pravatar.cc/60",
     username: "lithuanian_amber",
     country: "Lithuania",
     flag: "https://flagcdn.com/24x18/lt.png",
