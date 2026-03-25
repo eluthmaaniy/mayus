@@ -533,13 +533,19 @@
     </main>
   </div>
 
-  <!-- Mobile contact -->
-  <div class="container mx-auto px-4 mt-8 md:hidden">
-    <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
-      <i class="ri-send-plane-fill mr-2"></i> Contact me
-    </a>
-    <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
+<!-- Mobile Contact Button -->
+<div class="container mx-auto px-4 mt-8 md:hidden">
+  <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
+    <i class="ri-send-plane-fill mr-2"></i> Contact me
+  </a>
+  <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
+
+  <!-- ✅ Online status + Nigerian local time -->
+  <div class="flex items-center justify-center gap-2 mt-1 text-sm text-gray-500">
+    <span class="w-2 h-2 rounded-full bg-hover inline-block animate-pulse"></span>
+    <span>Online &bull; <span id="nigeria-time-mobile"></span> local time</span>
   </div>
+</div>
 
   <!-- Footer (slim) -->
   <footer class="mt-12 bg-heading text-white py-8">
@@ -553,5 +559,6 @@
       <script src="../js/footer-date.js"></script>
       <script src="../js/reviews.js"></script>
         <script src="../js/seamless-scroll.js"></script>
+            <script src="../js/online.js"></script>
 </body>
 </html>
