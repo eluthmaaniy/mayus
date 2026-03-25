@@ -110,8 +110,9 @@
 </head>
 <body class="bg-white text-black antialiased font-sans">
 
-  <div class="w-full h-48 md:h-64 bg-gray-200"> 
-    <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758613523/203831-removebg-preview_tlrrs1.png" alt="Cover Image" class="w-full h-full object-cover bg-gray-100">
+      <!-- Cover Image -->
+ <div class="w-full h-48 md:h-64 bg-gray-200"> 
+   <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1774418222/IMG_20260325_065619_079_fsamor.png" alt="Cover Image" class="w-full h-full object-cover bg-gray-100">
   </div>
   
   <div class="container mx-auto px-4 md:grid md:grid-cols-12 md:gap-8 relative md:mt-8">
@@ -120,29 +121,31 @@
         <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
       </div> 
       
-      <!-- ✅ EXACT FIVERR MATCH – Top Rated Badge (precise colors) -->
-<div class="pt-20 md:pt-4">
-  <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
-  
-  <div class="flex items-center text-sm mt-2">
-    <i class="ri-star-fill text-black"></i>
-    <span class="ml-1 text-black font-semibold">5.0</span>
-    <a href="/reviews" class="ml-1 text-gray-600">(1.1k)</a>
-    
-    <!-- EXACT FIVERR TOP RATED BADGE -->
-    <span 
-      class="ml-2 inline-flex items-center gap-1 px-3 py-1 rounded-md text-sm font-semibold"
-      style="
-        background: linear-gradient(135deg, #fee0b2 60%, #c7a585 85%, #af8c6d 100%);
-        color: #4f2911;
-      "
-    >
-      Top Rated
-      <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
-      <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
-      <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
-    </span>
-  </div>
+      <!-- Top Rated Badge -->
+      <div class="pt-20 md:pt-4">
+        <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
+
+        <div class="flex items-center text-sm mt-2 flex-wrap gap-y-1">
+          <i class="ri-star-fill text-black"></i>
+          <span class="ml-1 text-black font-semibold">5.0</span>
+
+          <!-- ✅ CHANGE 1: (1.1k) as a visible, styled link -->
+          <a href="/reviews" class="ml-1 text-hover underline underline-offset-2 font-medium hover:text-accent transition-colors">(1.1k)</a>
+
+          <!-- ✅ CHANGE 2: Vertical divider before Top Rated badge -->
+          <span class="mx-2 inline-block w-px h-4 bg-gray-300 self-center"></span>
+
+          <!-- Top Rated Badge -->
+          <span
+            class="inline-flex items-center gap-1 px-3 py-1 rounded-md text-sm font-semibold"
+            style="background: linear-gradient(135deg, #fee0b2 100%, #c7a585 55%, #af8c6d 50%); color: #4f2911;"
+          >
+            Top Rated
+            <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
+            <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
+            <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
+          </span>
+        </div>
 
         
         <p class="text-heading font-medium">He'll Bring Your Idea Into Reality!</p>
