@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayus Alaro - Top Rated Shopify Expert & Digital Marketing Specialist</title>
-  <meta name="description" content="Mayus Alaro is a top-rated Shopify expert and digital marketing specialist with 5+ years experience. 942+ satisfied clients, 5.0 rating. Expert in e-commerce, Facebook Ads, Google Ads, and store optimization.">
-  <meta name="keywords" content="Mayus Alaro, Shopify expert, digital marketing, e-commerce specialist, Facebook Ads, Google Ads, Shopify store design, dropshipping expert">
+
+  <!-- ✅ CHANGE 5: Updated title & meta -->
+  <title>Mayus Alaro - Top Rated Shopify Expert</title>
+  <meta name="description" content="Mayus Alaro is a top-rated Shopify expert with 5+ years experience. 1,100+ satisfied clients, 5.0 rating. Expert in e-commerce, Facebook Ads, Google Ads, and store optimization.">
+  <meta name="keywords" content="Mayus Alaro, Shopify expert, top rated Shopify expert, e-commerce specialist, Facebook Ads, Google Ads, Shopify store design, dropshipping expert">
   <meta name="author" content="Mayus Alaro">
-  <meta property="og:title" content="Mayus Alaro - Top Rated Shopify Expert & Digital Marketing Specialist">
-  <meta property="og:description" content="Top-rated Shopify expert with 942+ satisfied clients and 5.0 rating. Expert in e-commerce, digital marketing, and store optimization.">
+  <meta property="og:title" content="Mayus Alaro - Top Rated Shopify Expert">
+  <meta property="og:description" content="Top-rated Shopify expert with 1,100+ satisfied clients and 5.0 rating. Expert in e-commerce, Shopify store design, and store optimization.">
   <meta property="og:image" content="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg">
-  <meta property="og:url" content="https://mayus.com.ng">
+  <meta property="og:url" content="https://mayusalaro.com">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mayus Alaro - Top Rated Shopify Expert">
+  <meta name="twitter:description" content="Top-rated Shopify expert with 1,100+ satisfied clients and 5.0 rating.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg">
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="canonical" href="https://www.mayusalaro.com">
   <link rel="icon" href="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" type="image/x-icon">
-  
-  <!-- Add these in <head> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -56,7 +59,7 @@
         <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
       </div>
 
-      <!-- Top Rated Badge -->
+      <!-- Name + Badge -->
       <div class="pt-20 md:pt-4">
         <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
 
@@ -64,16 +67,16 @@
           <i class="ri-star-fill text-black"></i>
           <span class="ml-1 text-black font-semibold">5.0</span>
 
-          <!-- ✅ CHANGE 1: (1.1k) as a visible, styled link -->
-          <a href="/reviews" class="ml-1 text-hover underline underline-offset-2 font-medium hover:text-accent transition-colors">(1.1k)</a>
+          <!-- ✅ CHANGE 1: (1,100) as dark gray link, no underline by default -->
+<a href="/reviews" class="ml-1 text-gray-700 font-medium underline underline-offset-2">(1.1k+)</a>
 
-          <!-- ✅ CHANGE 2: Vertical divider before Top Rated badge -->
-          <span class="mx-2 inline-block w-px h-4 bg-gray-300 self-center"></span>
+          <!-- ✅ CHANGE 1: Divider darker -->
+          <span class="mx-2 inline-block w-px h-4 bg-gray-500 self-center"></span>
 
           <!-- Top Rated Badge -->
           <span
             class="inline-flex items-center gap-1 px-3 py-1 rounded-md text-sm font-semibold"
-            style="background: linear-gradient(135deg, #fee0b2 100%, #c7a585 55%, #af8c6d 50%); color: #4f2911;"
+            style="background: linear-gradient(135deg, #fee0b2 60%, #c7a585 85%, #af8c6d 100%); color: #4f2911;"
           >
             Top Rated
             <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
@@ -83,9 +86,15 @@
         </div>
 
         <p class="text-heading font-medium mt-2">He'll Bring Your Idea Into Reality!</p>
+
+        <!-- ✅ CHANGE 1: Local time moved here, right after Nigeria · English -->
         <div class="flex items-center text-sm text-gray-600 mt-2">
           <i class="ri-map-pin-line mr-1"></i> Nigeria
           <i class="ri-global-line ml-4 mr-1"></i> English
+        </div>
+        <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
+          <span class="w-2 h-2 rounded-full bg-hover inline-block animate-pulse"></span>
+          <span>Online &bull; <span id="nigeria-time"></span> local time</span>
         </div>
 
         <!-- Desktop Contact Button -->
@@ -130,7 +139,7 @@
         </div>
       </div>
 
-      <!-- About Me Section -->
+      <!-- About Me -->
       <div id="about" class="mt-8">
         <h2 class="text-xl md:text-2xl font-bold text-heading">About me</h2>
         <p class="mt-4 text-gray-700" id="bio-synopsis">
@@ -141,32 +150,30 @@
           Hi, I'm Mayus Alaro, an eCommerce Developer and Digital Marketer with years of experience. I've built and optimized over 450 Shopify stores, helping brands grow sales, increase visibility, and long-term profitability. I specialize in Shopify dropshipping, winning product research, Google Merchant Center, Etsy dropshipping, Pinterest ads, SEO, social media marketing, and eBook publishing. I also manage Facebook, Instagram, and Google Ads, as well as email flows and sales funnels, to maximize conversions. Contact me now—let's turn your store into a profit-driven brand.
         </p>
 
-        <!-- Skills -->
+        <!-- ✅ CHANGE 3: Shopify skills pushed to front -->
         <h3 class="mt-8 text-xl font-bold text-heading">Skills</h3>
         <div class="flex flex-wrap gap-2 mt-4" id="skills-list">
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">TikTok Ads Manager</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Instagram Ads Manager</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Developer</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Store Designer</span>
           <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Product Listing Expert</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Product Researcher</span>
-          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Etsy Expert</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Dropshipping Expert</span>
+          <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Marketing Expert</span>
           <a href="#" id="show-more-skills" class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading font-bold hover:text-hover">+12</a>
           <div id="hidden-skills" class="flex flex-wrap gap-2 hidden">
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Dropshipping Store Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Product Researcher</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Etsy Expert</span>
             <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Etsy Listing Expert</span>
             <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Google Ad Manager</span>
             <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Google Merchant Expert</span>
             <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Facebook Shop Expert</span>
-            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Dropshipping Expert</span>
-            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Dropshipping Store Expert</span>
-            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Store Designer</span>
-            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Developer</span>
-            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Shopify Marketing Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Facebook Ads Expert</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">TikTok Ads Manager</span>
+            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Instagram Ads Manager</span>
             <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Social Media Marketer</span>
             <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Email Marketer</span>
-            <span class="bg-gray-100 rounded-full px-3 py-1 text-sm text-heading">Facebook Ads Expert</span>
           </div>
         </div>
-
-        <!-- ✅ CHANGE 3: New Sections after Skills -->
 
         <!-- Fiverr Learn Certification -->
         <div class="mt-10 border-t border-gray-100 pt-8">
@@ -185,7 +192,7 @@
           </div>
         </div>
 
-        <!-- Education -->
+        <!-- ✅ CHANGE 4: Education updated -->
         <div class="mt-10 border-t border-gray-100 pt-8">
           <h3 class="text-xl font-bold text-heading mb-5">Education</h3>
           <div class="flex items-start gap-4">
@@ -193,9 +200,9 @@
               <i class="ri-graduation-cap-fill text-gray-500 text-2xl"></i>
             </div>
             <div>
-              <p class="font-semibold text-heading text-sm">University of Lagos</p>
-              <p class="text-gray-500 text-sm mt-0.5">B.Sc. Degree. Computer Science</p>
-              <p class="text-gray-400 text-sm">Graduated 2019</p>
+              <p class="font-semibold text-heading text-sm">Usmanu Danfodiyo University Sokoto (UDUS)</p>
+              <p class="text-gray-500 text-sm mt-0.5">B.A. Bachelor of Arts. Religious Studies</p>
+              <p class="text-gray-400 text-sm">Graduated 2023</p>
             </div>
           </div>
         </div>
@@ -226,53 +233,48 @@
         </div>
 
 
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
 
-<!-- Mobile Contact Button -->
-<div class="container mx-auto px-4 mt-8 md:hidden">
-  <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
-    <i class="ri-send-plane-fill mr-2"></i> Contact me
-  </a>
-  <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
-
-  <!-- ✅ Online status + Nigerian local time -->
-  <div class="flex items-center justify-center gap-2 mt-1 text-sm text-gray-500">
-    <span class="w-2 h-2 rounded-full bg-hover inline-block animate-pulse"></span>
-    <span>Online &bull; <span id="nigeria-time-mobile"></span> local time</span>
+  <!-- Mobile Contact Button -->
+  <div class="container mx-auto px-4 mt-8 md:hidden">
+    <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
+      <i class="ri-send-plane-fill mr-2"></i> Contact me
+    </a>
+    <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
+    <!-- Mobile online status (mirrors sidebar) -->
+    <div class="flex items-center justify-center gap-2 mt-1 text-sm text-gray-500">
+      <span class="w-2 h-2 rounded-full bg-hover inline-block animate-pulse"></span>
+      <span>Online &bull; <span id="nigeria-time-mobile"></span> local time</span>
+    </div>
   </div>
-</div>
-
 
   <!-- Footer -->
   <footer class="mt-12 bg-heading text-white py-8">
     <div class="container mx-auto px-4 text-center">
       <p class="text-sm">&copy; <span id="year"></span> Mayus Alaro. All rights reserved.</p>
     </div>
-    
   </footer>
 
+  <!-- Nigerian time script (updates both sidebar + mobile) -->
+    <script src="js/online.js"></script>
   <script src="js/main.js"></script>
   <script src="js/footer-date.js"></script>
   <script src="js/seamless-scroll.js"></script>
-    <script src="js/online.js"></script>
-    
+
   <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/694e404f61a703197b5aad45/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/694e404f61a703197b5aad45/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 </html>

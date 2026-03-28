@@ -52,7 +52,8 @@
           <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
            </div> 
            
-      <!-- Top Rated Badge -->
+
+      <!-- Name + Badge -->
       <div class="pt-20 md:pt-4">
         <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
 
@@ -60,16 +61,16 @@
           <i class="ri-star-fill text-black"></i>
           <span class="ml-1 text-black font-semibold">5.0</span>
 
-          <!-- ✅ CHANGE 1: (1.1k) as a visible, styled link -->
-          <a href="/reviews" class="ml-1 text-hover underline underline-offset-2 font-medium hover:text-accent transition-colors">(1.1k)</a>
+          <!-- ✅ CHANGE 1: (1,100) as dark gray link, no underline by default -->
+<a href="/reviews" class="ml-1 text-gray-700 font-medium underline underline-offset-2">(1.1k+)</a>
 
-          <!-- ✅ CHANGE 2: Vertical divider before Top Rated badge -->
-          <span class="mx-2 inline-block w-px h-4 bg-gray-300 self-center"></span>
+          <!-- ✅ CHANGE 1: Divider darker -->
+          <span class="mx-2 inline-block w-px h-4 bg-gray-500 self-center"></span>
 
           <!-- Top Rated Badge -->
           <span
             class="inline-flex items-center gap-1 px-3 py-1 rounded-md text-sm font-semibold"
-            style="background: linear-gradient(135deg, #fee0b2 100%, #c7a585 55%, #af8c6d 50%); color: #4f2911;"
+            style="background: linear-gradient(135deg, #fee0b2 60%, #c7a585 85%, #af8c6d 100%); color: #4f2911;"
           >
             Top Rated
             <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
@@ -78,21 +79,29 @@
           </span>
         </div>
 
-        <p class="text-heading font-medium">He'll Bring Your Idea Into Reality!</p>
+        <p class="text-heading font-medium mt-2">He'll Bring Your Idea Into Reality!</p>
+
+        <!-- ✅ CHANGE 1: Local time moved here, right after Nigeria · English -->
         <div class="flex items-center text-sm text-gray-600 mt-2">
           <i class="ri-map-pin-line mr-1"></i> Nigeria
           <i class="ri-global-line ml-4 mr-1"></i> English
         </div>
-        
-                
-                <div class="hidden md:block mt-6">
-                    <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
-                        <i class="ri-send-plane-fill mr-2"></i> Contact me
-                    </a>
-                    <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
-                </div>
-            </div>
+        <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
+          <span class="w-2 h-2 rounded-full bg-hover inline-block animate-pulse"></span>
+          <span>Online &bull; <span id="nigeria-time"></span> local time</span>
         </div>
+
+        <!-- Desktop Contact Button -->
+        <div class="hidden md:block mt-6">
+          <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+            <i class="ri-send-plane-line mr-2"></i> Contact me
+          </a>
+          <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
+        </div>
+      </div>
+    </div>
+
+
 
         <!-- Main Content -->
         <div class="md:col-span-9 mt-4 md:mt-0">
