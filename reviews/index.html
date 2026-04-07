@@ -5,565 +5,299 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mayus Alaro - Reviews</title>
 
-  <!-- Fonts & RemixIcon -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-
-  <!-- Swiper CSS -->
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <link rel="icon" href="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" type="image/x-icon">
 
-  <!-- Favicon -->
-    <link rel="icon" href="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" type="image/x-icon">
-    
-  <!-- Tailwind (CDN) -->
-      <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        heading: '#222325',
-                        hover: '#1DBF73',
-                        accent: '#0F5533',
-                        pink: '#FF69B4',
-                    },
-                    fontFamily: {
-                        sans: ['DM Sans', 'sans-serif'],
-                    },
-                },
-            },
-        }
-    </script>
-    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            heading: '#222325',
+            hover: '#1DBF73',
+            accent: '#0F5533',
+            pink: '#FF69B4',
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
   <style>
-    /* small enhancement for star row */
-    .stars-row i { margin-right: 2px; }
-    /* tiny card image aspect */
-    .gig-thumb { width: 72px; height: 48px; object-fit: cover; border-radius: 6px; }
+    /* ── Online pill ── */
+    .online-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: #e6f9f0;
+      border: 1px solid #a3e6c5;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #0a7a45;
+      letter-spacing: 0.01em;
+      line-height: 1;
+    }
+    .online-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #1DBF73;
+      box-shadow: 0 0 0 0 rgba(29, 191, 115, 0.6);
+      animation: pulse-dot 1.8s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-dot {
+      0%   { box-shadow: 0 0 0 0 rgba(29,191,115,0.55); }
+      60%  { box-shadow: 0 0 0 5px rgba(29,191,115,0); }
+      100% { box-shadow: 0 0 0 0 rgba(29,191,115,0); }
+    }
+
+    /* ── Typography balance ── */
+    body { font-size: 15px; line-height: 1.65; }
+    h1   { font-size: clamp(1.25rem, 4vw, 1.6rem);  font-weight: 800; }
+    h2   { font-size: clamp(1.15rem, 3vw, 1.4rem);  font-weight: 800; }
+    h3   { font-size: clamp(1rem, 2.5vw, 1.15rem);  font-weight: 800; }
+    .label-sm { font-size: 0.8125rem; font-weight: 500; }
+
+    /* ── Featured Swiper ── */
+    .featured-swiper {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .featured-swiper .swiper-slide {
+      width: 100%;
+    }
+    /* 16:9 rectangular ratio */
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ── Video grid (remaining videos) ── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+      gap: 1.25rem;
+    }
+
+    /* Swiper nav buttons */
+    .featured-swiper .swiper-button-next,
+    .featured-swiper .swiper-button-prev {
+      color: #fff;
+      background: rgba(0,0,0,0.35);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    .featured-swiper .swiper-button-next::after,
+    .featured-swiper .swiper-button-prev::after {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .featured-swiper .swiper-pagination-bullet-active {
+      background: #1DBF73;
+    }
   </style>
-  
 </head>
 <body class="bg-white text-black antialiased font-sans">
 
-    <!-- Cover Image -->
- <div class="w-full h-48 md:h-64 bg-gray-200"> 
-   <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1774418222/IMG_20260325_065619_079_fsamor.png" alt="Cover Image" class="w-full h-full object-cover bg-gray-100">
+  <!-- Cover Image -->
+  <div class="w-full h-48 md:h-64 bg-gray-200">
+    <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1774418222/IMG_20260325_065619_079_fsamor.png" alt="Cover Image" class="w-full h-full object-cover bg-gray-100">
   </div>
-  
-  <!-- Main Content Grid for Desktop Optimization --> 
+
+  <!-- Main Content Grid -->
   <div class="container mx-auto px-4 md:grid md:grid-cols-12 md:gap-8 relative md:mt-8">
-     <!-- Profile Sidebar (Sticky on Desktop) --> 
-     <div class="md:col-span-3 relative md:sticky md:top-4 md:self-start">
-        <div class="absolute -top-16 left-0 md:static md:top-0"> 
-          <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
-           </div> 
-           
+
+    <!-- Profile Sidebar -->
+    <div class="md:col-span-3 relative md:sticky md:top-4 md:self-start">
+      <div class="absolute -top-16 left-0 md:static md:top-0">
+        <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
+      </div>
+
       <!-- Name + Badge -->
       <div class="pt-20 md:pt-4">
         <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
 
-        <div class="flex items-center text-sm mt-2 flex-wrap gap-y-1">
-          <i class="ri-star-fill text-black"></i>
-          <span class="ml-1 text-black font-semibold">5.0</span>
-
-          <!-- ✅ CHANGE 1: (1,100) as dark gray link, no underline by default -->
-<a href="/reviews" class="ml-1 text-gray-700 font-medium underline underline-offset-2">(1.1k+)</a>
-
-          <!-- ✅ CHANGE 1: Divider darker -->
-          <span class="mx-2 inline-block w-px h-4 bg-gray-500 self-center"></span>
-
-<!-- Top Rated Badge -->
-          <span
-            class="inline-flex items-center gap-1 px-3 py-1 rounded-md text-sm font-semibold"
-            style="background: linear-gradient(135deg, #fee0b2 100%, #c7a585 55%, #af8c6d 50%); color: #4f2911;"
-          >
-            Top Rated
-            <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
-            <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
-            <i class="ri-shining-2-fill" style="color: #4f2911;"></i>
+        <div class="flex items-center gap-3 mt-3 flex-wrap">
+          <span class="online-pill">
+            <span class="online-dot"></span>
+            Online
           </span>
+          <span class="label-sm text-gray-500"><span id="nigeria-time"></span> local time</span>
         </div>
 
-        <p class="text-heading font-medium mt-2">He'll Bring Your Idea Into Reality!</p>
+        <p class="text-heading mt-3" style="font-weight:500; font-size:0.9rem;">He'll Bring Your Idea Into Reality!</p>
 
-        <!-- ✅ CHANGE 1: Local time moved here, right after Nigeria · English -->
-        <div class="flex items-center text-sm text-gray-600 mt-2">
-          <i class="ri-map-pin-line mr-1"></i> Nigeria
-          <i class="ri-global-line ml-4 mr-1"></i> English
-        </div>
-        <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
-          <span class="w-2 h-2 rounded-full bg-hover inline-block animate-pulse"></span>
-          <span>Online &bull; <span id="nigeria-time"></span> local time</span>
+        <div class="flex items-center label-sm text-gray-500 mt-2 gap-4">
+          <span><i class="ri-map-pin-line mr-1"></i>Nigeria</span>
+          <span><i class="ri-global-line mr-1"></i>English</span>
         </div>
 
         <!-- Desktop Contact Button -->
         <div class="hidden md:block mt-6">
-          <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+          <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center hover:bg-accent transition-colors" style="font-size:0.9rem; font-weight:600;">
             <i class="ri-send-plane-line mr-2"></i> Contact me
           </a>
-          <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
+          <p class="text-center text-gray-400 mt-2" style="font-size:0.78rem;">Average response time: 1 hour</p>
         </div>
       </div>
     </div>
-    
 
-        <!-- Main Content -->
-        <div class="md:col-span-9 mt-4 md:mt-0">
-            <!-- Navigation -->
-            <div class="flex overflow-x-auto space-x-6 md:space-x-8 text-heading font-medium text-sm md:text-base whitespace-nowrap border-b border-gray-200 pb-4">
-                <a href="index.html#about" class="hover:text-hover transition-colors">About</a>
-        
-                <a href="/reviews" class="hover:text-hover transition-colors">Reviews</a>
-                <a href="/portfolio" class="hover:text-hover transition-colors">Portfolio</a>
-                <a href="/contact" class="hover:text-hover transition-colors">Contact</a>
-            </div>
-            
-            
-        <div class="hidden md:block mt-6">
-          <a href="https://chatwith.io/s/mayus"
-             class="bg-heading text-white px-6 py-2 rounded-full inline-flex items-center gap-2 hover:bg-accent transition">
-            <i class="ri-send-plane-fill"></i> Contact me
-          </a>
-          <p class="text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
-        </div>
+    <!-- Main Content -->
+    <div class="md:col-span-9 mt-4 md:mt-0">
+
+      <!-- Navigation -->
+      <div class="flex overflow-x-auto space-x-6 md:space-x-8 text-heading font-medium text-sm md:text-base whitespace-nowrap border-b border-gray-200 pb-4">
+        <a href="index.html#about" class="hover:text-hover transition-colors">About</a>
+        <a href="/reviews" class="hover:text-hover transition-colors">Reviews</a>
+        <a href="/portfolio" class="hover:text-hover transition-colors">Portfolio</a>
+        <a href="/contact" class="hover:text-hover transition-colors">Contact</a>
       </div>
-    </aside>
 
-    <!-- Content -->
-    <main class="md:col-span-9 mt-6 md:mt-0">
-
-      
-
-<!-- Reviews Header & Summary -->
-<section class="mt-8 md:flex md:gap-8">
-  <!-- Left: Summary -->
-  <div class="md:w-1/2">
-    <h2 class="text-xl md:text-2xl font-bold text-heading">1,100 Reviews</h2>
-    <div class="mt-4 flex items-center gap-4">
-      <div>
-        <div class="text-3xl font-bold text-heading">5.0</div>
-        <div class="stars-row mt-1 text-sm text-black">
-          <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-        </div>
-      </div>
-      <div class="ml-2 text-sm text-gray-600">
-        <div class="flex items-center gap-2">
-          <span class="w-20">5 Stars</span>
-          <div class="flex-1 bg-gray-200 h-2 rounded overflow-hidden">
-            <div class="bg-accent h-2" style="width:96%"></div>
+      <!-- Reviews Section -->
+      <section class="mt-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+          <div>
+            <h2 class="text-xl md:text-2xl font-bold text-heading">Video Reviews Of My Work</h2>
+            <p class="text-gray-500 mt-1" style="font-size:0.9rem;">Real results and proof of work.</p>
           </div>
-          <span>(1,056)</span>
-        </div>
-        <div class="flex items-center gap-2 mt-2">
-          <span class="w-20">4 Stars</span>
-          <div class="flex-1 bg-gray-200 h-2 rounded overflow-hidden">
-            <div class="bg-accent h-2" style="width:3%"></div>
-          </div>
-          <span>(30)</span>
-        </div>
-        <div class="flex items-center gap-2 mt-2">
-          <span class="w-20">3 Stars</span>
-          <div class="flex-1 bg-gray-200 h-2 rounded overflow-hidden">
-            <div class="bg-accent h-2" style="width:1%"></div>
-          </div>
-          <span>(8)</span>
-        </div>
-        <div class="flex items-center gap-2 mt-2">
-          <span class="w-20">2 Stars</span>
-          <div class="flex-1 bg-gray-200 h-2 rounded overflow-hidden">
-            <div class="bg-accent h-2" style="width:0.5%"></div>
-          </div>
-          <span>(4)</span>
-        </div>
-        <div class="flex items-center gap-2 mt-2">
-          <span class="w-20">1 Star</span>
-          <div class="flex-1 bg-gray-200 h-2 rounded overflow-hidden">
-            <div class="bg-accent h-2" style="width:0.2%"></div>
-          </div>
-          <span>(2)</span>
-        </div>
-      </div>
-    </div>
-    
-          <!-- Quality metrics -->
-          <div class="mt-6 text-sm space-y-2">
-            <div class="flex justify-between"><span>Seller communication level</span> <span class="text-black"><i class="ri-star-fill"></i> 5</span></div>
-            <div class="flex justify-between"><span>Quality of delivery</span> <span class="text-black"><i class="ri-star-fill"></i> 5</span></div>
-            <div class="flex justify-between"><span>Value of delivery</span> <span class="text-black"><i class="ri-star-fill"></i> 5</span></div>
-          </div>
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 label-sm font-semibold text-heading self-start sm:self-auto">
+            <i class="ri-video-line text-hover"></i>
+            5 Videos
+          </span>
         </div>
 
-        <!-- Right: Featured reviews carousel -->
-        <div class="md:w-1/2 mt-6 md:mt-0">
-          <h3 class="text-lg font-semibold text-heading mb-3">Featured Reviews</h3>
-
+        <!-- Featured Swiper (2 videos, auto-sliding) -->
+        <div class="mt-6">
+          <h3 class="text-xl md:text-2xl font-bold text-heading mb-3">⭐ Featured</h3>
           <div class="swiper featured-swiper">
             <div class="swiper-wrapper">
-
-              <!-- Featured review 1 -->
               <div class="swiper-slide">
-                <div class="bg-white rounded-lg p-4 shadow-md">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://i.pravatar.cc/60?img=11" alt="avatar" class="w-12 h-12 rounded-full" />
-                      <div>
-                        <div class="flex items-center gap-2">
-                          <p class="font-medium">nybestseller</p>
-                          <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="inline-block" />
-                        </div>
-                        <p class="text-xs text-gray-500">France</p>
-                      </div>
-                    </div>
-
-                    <div class="text-sm text-black">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                      <span class="ml-2">5</span>
-                    </div>
-                  </div>
-
-                  <p class="mt-3 text-gray-700 text-sm">
-                    Working with Mayus has been an absolute game-changer for my business. His expertise in marketing strategy, Google Ads and Meta campaigns is unmatched...
-                  </p>
-
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609405/IMG-20250921-WA0043_pdhfii.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$400-$600 • 5 days</div>
-                    </div>
-
-                    <a href="/full-reviews" class="text-sm text-blue-600 hover:underline">See full review</a>
-                  </div>
+                <div class="video-wrap">
+                  <iframe src="https://www.youtube.com/embed/u0eUmTlTXHg" allowfullscreen></iframe>
                 </div>
               </div>
-
-              <!-- Featured review 2 -->
               <div class="swiper-slide">
-                <div class="bg-white rounded-lg p-4 shadow-md">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://i.pravatar.cc/60?img=32" alt="avatar" class="w-12 h-12 rounded-full" />
-                      <div>
-                        <div class="flex items-center gap-2">
-                          <p class="font-medium">keyurkaneria</p>
-                          <img src="https://flagcdn.com/24x18/in.png" alt="India" class="inline-block" />
-                        </div>
-                        <p class="text-xs text-gray-500">India</p>
-                      </div>
-                    </div>
-
-                    <div class="text-sm text-black">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                      <span class="ml-2">5</span>
-                    </div>
-                  </div>
-
-                  <p class="mt-3 text-gray-700 text-sm">
-                    Mayus did an excellent job setting up my Facebook and Instagram Shops and creating a high-quality campaign...
-                  </p>
-
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609506/IMG-20250921-WA0092_ieopxm.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$100-$200 • 7 days</div>
-                    </div>
-
-                    <a href="/full-reviews" class="text-sm text-blue-600 hover:underline">See full review</a>
-                  </div>
+                <div class="video-wrap">
+                  <iframe src="https://www.youtube.com/embed/hQ4C2MhSSzA" allowfullscreen></iframe>
                 </div>
               </div>
-
-              <!-- Featured review 3 -->
-              <div class="swiper-slide">
-                <div class="bg-white rounded-lg p-4 shadow-md">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://i.pravatar.cc/60?img=5" alt="avatar" class="w-12 h-12 rounded-full" />
-                      <div>
-                        <div class="flex items-center gap-2">
-                          <p class="font-medium">design_queen</p>
-                          <img src="https://flagcdn.com/24x18/us.png" alt="USA" class="inline-block" />
-                        </div>
-                        <p class="text-xs text-gray-500">United States</p>
-                      </div>
-                    </div>
-
-                    <div class="text-sm text-black">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                      <span class="ml-2">5</span>
-                    </div>
-                  </div>
-
-                  <p class="mt-3 text-gray-700 text-sm">
-                    Excellent communication, fast delivery and clear steps. The campaigns improved conversions quickly...
-                  </p>
-
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609504/IMG-20250921-WA0090_g6lmty.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$250 • 3 days</div>
-                    </div>
-
-                    <a href="/full-reviews" class="text-sm text-blue-600 hover:underline">See full review</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Featured review 4 -->
-              <div class="swiper-slide">
-                <div class="bg-white rounded-lg p-4 shadow-md">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://i.pravatar.cc/60?img=15" alt="avatar" class="w-12 h-12 rounded-full" />
-                      <div>
-                        <div class="flex items-center gap-2">
-                          <p class="font-medium">bright_seller</p>
-                          <img src="https://flagcdn.com/24x18/gb.png" alt="UK" class="inline-block" />
-                        </div>
-                        <p class="text-xs text-gray-500">United Kingdom</p>
-                      </div>
-                    </div>
-
-                    <div class="text-sm text-black">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                      <span class="ml-2">5</span>
-                    </div>
-                  </div>
-
-                  <p class="mt-3 text-gray-700 text-sm">
-                    Great service and clear guidance. Will hire again for future store builds.
-                  </p>
-
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609505/IMG-20250921-WA0091_ymtuvy.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$180 • 4 days</div>
-                    </div>
-
-                    <a href="/full-reviews" class="text-sm text-blue-600 hover:underline">See full review</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Featured review 5 -->
-              <div class="swiper-slide">
-                <div class="bg-white rounded-lg p-4 shadow-md">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://i.pravatar.cc/60?img=20" alt="avatar" class="w-12 h-12 rounded-full" />
-                      <div>
-                        <div class="flex items-center gap-2">
-                          <p class="font-medium">eco_stores</p>
-                          <img src="https://flagcdn.com/24x18/de.png" alt="DE" class="inline-block" />
-                        </div>
-                        <p class="text-xs text-gray-500">Germany</p>
-                      </div>
-                    </div>
-                    <div class="text-sm text-black">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                      <span class="ml-2">5</span>
-                    </div>
-                  </div>
-
-                  <p class="mt-3 text-gray-700 text-sm">
-                    Delivered great results, communication was top-notch. The store looks and converts better now.
-                  </p>
-
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609405/IMG-20250921-WA0043_pdhfii.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$320 • 6 days</div>
-                    </div>
-
-                    <a href="/full-reviews" class="text-sm text-blue-600 hover:underline">See full review</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Featured review 6 -->
-              <div class="swiper-slide">
-                <div class="bg-white rounded-lg p-4 shadow-md">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://i.pravatar.cc/60?img=47" alt="avatar" class="w-12 h-12 rounded-full" />
-                      <div>
-                        <div class="flex items-center gap-2">
-                          <p class="font-medium">north_star</p>
-                          <img src="https://flagcdn.com/24x18/ca.png" alt="Canada" class="inline-block" />
-                        </div>
-                        <p class="text-xs text-gray-500">Canada</p>
-                      </div>
-                    </div>
-
-                    <div class="text-sm text-black">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                      <span class="ml-2">5</span>
-                    </div>
-                  </div>
-
-                  <p class="mt-3 text-gray-700 text-sm">
-                    Reliable, clear and fast. Delivered everything as promised with screen recordings and documentation.
-                  </p>
-
-                  <div class="mt-3 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609506/IMG-20250921-WA0092_ieopxm.jpg" alt="gig" class="gig-thumb" />
-                      <div class="text-xs text-gray-500">$150 • 3 days</div>
-                    </div>
-
-                    <a href="/full-reviews" class="text-sm text-blue-600 hover:underline">See full review</a>
-                  </div>
-                </div>
-              </div>
-
             </div>
+            <div class="swiper-pagination mt-3"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <!-- Remaining 3 videos in grid -->
+        <div class="mt-8">
+          <h3 class="text-xl md:text-2xl font-bold text-heading mb-3">More Reviews</h3>
+          <div class="video-grid">
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/b06zcFLK32s" allowfullscreen></iframe>
+            </div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/qI1D5ARWPxM" allowfullscreen></iframe>
+            </div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/UWKd4NiQuR8" allowfullscreen></iframe>
+            </div>
+            <!--
+              TO ADD MORE VIDEOS IN FUTURE:
+              Copy the block below and paste it here, replacing VIDEO_ID:
+
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+              </div>
+            -->
           </div>
         </div>
       </section>
 
-      <!-- Reviews list (grid) -->
-      <section class="mt-8">
-        <h3 class="text-lg font-semibold text-heading mb-4">Recent Reviews</h3>
-
-        <div class="grid grid-cols-1 gap-4">
-          <!-- Review Card 1 -->
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=11" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
-                    <p class="font-medium">nybestseller</p>
-                    <img src="https://flagcdn.com/24x18/fr.png" alt="France" />
-                  </div>
-                  <p class="text-xs text-gray-500">1 month ago</p>
-                </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-              </div>
-            </div>
-
-            <p class="mt-3 text-gray-700">Working with Mayus has been an absolute game-changer for my business. His expertise in marketing strategy, Google Ads, and Meta campaigns is unmatched. He’s professional, efficient, and always delivers clear instructions...</p>
-
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609405/IMG-20250921-WA0043_pdhfii.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$400-$600 • 5 days • Website Promotion</div>
-              </div>
-
-              <div class="text-xs text-gray-500">
-                <div class="font-medium text-heading">Seller's Response</div>
-                <div class="mt-1">Thanks! I enjoyed working with you and I'm glad the results are strong.</div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Review Card 2 -->
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=32" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
-                    <p class="font-medium">keyurkaneria</p>
-                    <img src="https://flagcdn.com/24x18/in.png" alt="India" />
-                  </div>
-                  <p class="text-xs text-gray-500">1 month ago</p>
-                </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-              </div>
-            </div>
-
-            <p class="mt-3 text-gray-700">Mr. Mayus did an excellent job setting up my Facebook and Instagram Shops and creating a high-quality campaign. His expertise and attention to detail were clearly visible throughout the process...</p>
-
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609506/IMG-20250921-WA0092_ieopxm.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$100-$200 • 7 days • Social Commerce Setup & Integration</div>
-              </div>
-
-              <div class="text-xs text-gray-500">
-                <div class="font-medium text-heading">Seller's Response</div>
-                <div class="mt-1">He’s a great client and I’ve had a great experience working with him!</div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Review Card 3 (repeat as needed) -->
-          <article class="bg-white rounded-lg p-4 shadow-md">
-            <div class="flex justify-between items-start">
-              <div class="flex items-center gap-3">
-                <img src="https://i.pravatar.cc/60?img=5" alt="avatar" class="w-12 h-12 rounded-full" />
-                <div>
-                  <div class="flex items-center gap-2">
-                    <p class="font-medium">design_queen</p>
-                    <img src="https://flagcdn.com/24x18/us.png" alt="USA" />
-                  </div>
-                  <p class="text-xs text-gray-500">2 months ago</p>
-                </div>
-              </div>
-
-              <div class="text-sm text-black">
-                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-              </div>
-            </div>
-
-            <p class="mt-3 text-gray-700">Excellent communication, fast delivery and clear steps. The campaigns improved conversions quickly. Documentation and screen recordings were very helpful.</p>
-
-            <div class="mt-3 flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758609504/IMG-20250921-WA0090_g6lmty.jpg" alt="gig" class="gig-thumb" />
-                <div class="text-xs text-gray-500">$250 • 3 days</div>
-              </div>
-
-              <div class="text-xs text-gray-500">Helpful? <a href="#" class="text-gray-700 hover:underline">Yes</a> <span class="mx-2">|</span> <a href="#" class="text-gray-700 hover:underline">No</a></div>
-            </div>
-          </article>
-
-        </div>
-
-        <!-- Show More -->
-        <div class="mt-6 text-center">
-          <a href="/full-reviews" class="inline-block bg-accent text-white px-5 py-2 rounded hover:bg-hover transition">
-            Show more reviews
-          </a>
-        </div>
-      </section>
-
-    </main>
+    </div>
   </div>
 
-<!-- Mobile Contact Button -->
-<div class="container mx-auto px-4 mt-8 md:hidden">
-  <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors">
-    <i class="ri-send-plane-fill mr-2"></i> Contact me
-  </a>
-  <p class="text-center text-gray-500 text-sm mt-2">Average response time: 1 hour</p>
-
-  <!-- ✅ Online status + Nigerian local time -->
-  <div class="flex items-center justify-center gap-2 mt-1 text-sm text-gray-500">
-    <span class="w-2 h-2 rounded-full bg-hover inline-block animate-pulse"></span>
-    <span>Online &bull; <span id="nigeria-time-mobile"></span> local time</span>
+  <!-- Mobile Contact Button -->
+  <div class="container mx-auto px-4 mt-8 md:hidden">
+    <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center shadow-lg hover:bg-accent transition-colors" style="font-size:0.9rem; font-weight:600;">
+      <i class="ri-send-plane-fill mr-2"></i> Contact me
+    </a>
+    <p class="text-center text-gray-400 mt-2" style="font-size:0.78rem;">Average response time: 1 hour</p>
+    <div class="flex items-center justify-center gap-2 mt-2">
+      <span class="online-pill">
+        <span class="online-dot"></span>
+        Online
+      </span>
+      <span class="label-sm text-gray-500"><span id="nigeria-time-mobile"></span> local time</span>
+    </div>
   </div>
-</div>
 
-  <!-- Footer (slim) -->
+  <!-- Footer -->
   <footer class="mt-12 bg-heading text-white py-8">
     <div class="container mx-auto px-4 text-center">
-      <p class="text-sm">&copy; <span id="year"></span> Mayus Alaro. All rights reserved.</p>
+      <p style="font-size:0.8rem;">&copy; <span id="year"></span> Mayus Alaro. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="../js/footer-date.js"></script>
-      <script src="../js/reviews.js"></script>
-        <script src="../js/seamless-scroll.js"></script>
-            <script src="../js/online.js"></script>
+  <script src="../js/footer-date.js"></script>
+  <script src="../js/seamless-scroll.js"></script>
+  <script src="../js/online.js"></script>
+
+  <script>
+    // Initialize Featured Swiper with autoplay
+    const featuredSwiper = new Swiper('.featured-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      speed: 700,
+    });
+  </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/694e404f61a703197b5aad45/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 </html>

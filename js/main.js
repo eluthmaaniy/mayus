@@ -3,11 +3,19 @@ const readMoreBtn = document.getElementById('read-more-bio');
 if (readMoreBtn) {
   readMoreBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    document.getElementById('bio-synopsis').classList.add('hidden');
     document.getElementById('bio-full').classList.remove('hidden');
+    this.classList.add('hidden');
   });
 }
 
+const readLessBtn = document.getElementById('read-less-bio');
+if (readLessBtn) {
+  readLessBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('bio-full').classList.add('hidden');
+    document.getElementById('read-more-bio').classList.remove('hidden');
+  });
+}
 // Show more skills
 const showMoreSkills = document.getElementById('show-more-skills');
 if (showMoreSkills) {
