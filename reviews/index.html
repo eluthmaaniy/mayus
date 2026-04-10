@@ -60,7 +60,7 @@
       100% { box-shadow: 0 0 0 0 rgba(29,191,115,0); }
     }
 
-    /* ── Typography balance ── */
+    /* ── Typography ── */
     body { font-size: 15px; line-height: 1.65; }
     h1   { font-size: clamp(1.25rem, 4vw, 1.6rem);  font-weight: 800; }
     h2   { font-size: clamp(1.15rem, 3vw, 1.4rem);  font-weight: 800; }
@@ -72,15 +72,17 @@
       width: 100%;
       border-radius: 12px;
       overflow: hidden;
+      padding-bottom: 44px !important;
     }
     .featured-swiper .swiper-slide {
       width: 100%;
     }
+
     /* 16:9 rectangular ratio */
     .video-wrap {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 */
+      padding-top: 56.25%;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 12px rgba(0,0,0,0.10);
@@ -93,29 +95,91 @@
       border: 0;
     }
 
-    /* ── Video grid (remaining videos) ── */
+    /* ── Video grid ── */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
       gap: 1.25rem;
     }
 
-    /* Swiper nav buttons */
+    /* ── Longest video highlight ── */
+    .video-card-highlight {
+      position: relative;
+      border-radius: 14px;
+      padding: 3px;
+      background: linear-gradient(135deg, #1DBF73, #0F5533, #1DBF73);
+      background-size: 200% 200%;
+      animation: gradient-shift 3s ease infinite;
+      box-shadow: 0 0 18px rgba(29,191,115,0.45);
+    }
+    @keyframes gradient-shift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .video-card-highlight .video-wrap {
+      border-radius: 11px;
+      box-shadow: none;
+    }
+    .longest-badge {
+      position: absolute;
+      top: -11px;
+      left: 12px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(90deg, #1DBF73, #0F5533);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 8px rgba(29,191,115,0.4);
+      white-space: nowrap;
+    }
+
+    /* Swiper nav */
     .featured-swiper .swiper-button-next,
     .featured-swiper .swiper-button-prev {
       color: #fff;
-      background: rgba(0,0,0,0.35);
-      width: 36px;
-      height: 36px;
+      background: rgba(0,0,0,0.38);
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
+      top: calc(50% - 22px);
     }
     .featured-swiper .swiper-button-next::after,
     .featured-swiper .swiper-button-prev::after {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
+    }
+    .featured-swiper .swiper-pagination {
+      bottom: 8px;
+    }
+    .featured-swiper .swiper-pagination-bullet {
+      background: #ccc;
+      opacity: 1;
     }
     .featured-swiper .swiper-pagination-bullet-active {
       background: #1DBF73;
+      transform: scale(1.2);
+    }
+
+    /* Slide counter badge */
+    .slide-counter {
+      position: absolute;
+      bottom: 52px;
+      right: 12px;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 999px;
+      z-index: 10;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -135,9 +199,8 @@
         <img src="https://res.cloudinary.com/dr83qj6bf/image/upload/v1758610128/IMG-20250923-WA0001_opx12g.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-500 bg-white shadow-md hover:border-hover transition-colors">
       </div>
 
-      <!-- Name + Badge -->
       <div class="pt-20 md:pt-4">
-        <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
+           <h1 class="text-2xl font-bold text-heading">Mayus Alaro</h1>
 
         <div class="flex items-center gap-3 mt-3 flex-wrap">
           <span class="online-pill">
@@ -154,7 +217,6 @@
           <span><i class="ri-global-line mr-1"></i>English</span>
         </div>
 
-        <!-- Desktop Contact Button -->
         <div class="hidden md:block mt-6">
           <a href="https://chatwith.io/s/mayus" class="bg-heading text-white px-6 py-2 rounded-full flex items-center justify-center hover:bg-accent transition-colors" style="font-size:0.9rem; font-weight:600;">
             <i class="ri-send-plane-line mr-2"></i> Contact me
@@ -179,50 +241,111 @@
       <section class="mt-8">
         <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
           <div>
-            <h2 class="text-xl md:text-2xl font-bold text-heading">Video Reviews Of My Work</h2>
+            <h2 class="text-xl md:text-2xl font-bold text-heading">Video Reviews Of My Work</h2
             <p class="text-gray-500 mt-1" style="font-size:0.9rem;">Real results and proof of work.</p>
           </div>
           <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 label-sm font-semibold text-heading self-start sm:self-auto">
             <i class="ri-video-line text-hover"></i>
-            5 Videos
+            6 Videos
           </span>
         </div>
 
-        <!-- Featured Swiper (2 videos, auto-sliding) -->
+        <!-- ── Featured Slider: ALL 6 videos ── -->
         <div class="mt-6">
           <h3 class="text-xl md:text-2xl font-bold text-heading mb-3">⭐ Featured</h3>
-          <div class="swiper featured-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="video-wrap">
-                  <iframe src="https://www.youtube.com/embed/u0eUmTlTXHg" allowfullscreen></iframe>
+          <div class="relative">
+            <div class="swiper featured-swiper">
+              <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/u0eUmTlTXHg" allowfullscreen></iframe>
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="video-wrap">
-                  <iframe src="https://www.youtube.com/embed/hQ4C2MhSSzA" allowfullscreen></iframe>
+
+                <!-- Slide 2 — LONGEST: highlighted -->
+                <div class="swiper-slide">
+                  <div class="video-card-highlight">
+                    <span class="longest-badge"><i class="ri-trophy-fill"></i> Longest &amp; Most Detailed Review</span>
+                    <div class="video-wrap">
+                      <iframe src="https://www.youtube.com/embed/hQ4C2MhSSzA" allowfullscreen></iframe>
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/b06zcFLK32s" allowfullscreen></iframe>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/qI1D5ARWPxM" allowfullscreen></iframe>
+                  </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                  <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/UWKd4NiQuR8" allowfullscreen></iframe>
+                  </div>
+                </div>
+
+                <!-- Slide 6 — New video -->
+                <div class="swiper-slide">
+                  <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/KTaqaiBV2W4" allowfullscreen></iframe>
+                  </div>
+                </div>
+
               </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-pagination mt-3"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- Slide counter e.g. "2 / 6" -->
+            <div class="slide-counter" id="slide-counter">1 / 6</div>
           </div>
         </div>
 
-        <!-- Remaining 3 videos in grid -->
-        <div class="mt-8">
+        <!-- ── More Reviews grid: all 6 ── -->
+        <div class="mt-10">
           <h3 class="text-xl md:text-2xl font-bold text-heading mb-3">More Reviews</h3>
           <div class="video-grid">
+
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/u0eUmTlTXHg" allowfullscreen></iframe>
+            </div>
+
+            <!-- Highlighted card in grid -->
+            <div class="video-card-highlight" style="position:relative;">
+              <span class="longest-badge"><i class="ri-trophy-fill"></i> Longest &amp; Most Detailed</span>
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/hQ4C2MhSSzA" allowfullscreen></iframe>
+              </div>
+            </div>
+
             <div class="video-wrap">
               <iframe src="https://www.youtube.com/embed/b06zcFLK32s" allowfullscreen></iframe>
             </div>
+
             <div class="video-wrap">
               <iframe src="https://www.youtube.com/embed/qI1D5ARWPxM" allowfullscreen></iframe>
             </div>
+
             <div class="video-wrap">
               <iframe src="https://www.youtube.com/embed/UWKd4NiQuR8" allowfullscreen></iframe>
             </div>
+
+            <!-- New video -->
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/KTaqaiBV2W4" allowfullscreen></iframe>
+            </div>
+
             <!--
               TO ADD MORE VIDEOS IN FUTURE:
               Copy the block below and paste it here, replacing VIDEO_ID:
@@ -266,7 +389,6 @@
   <script src="../js/online.js"></script>
 
   <script>
-    // Initialize Featured Swiper with autoplay
     const featuredSwiper = new Swiper('.featured-swiper', {
       loop: true,
       autoplay: {
@@ -283,6 +405,14 @@
         prevEl: '.swiper-button-prev',
       },
       speed: 700,
+      on: {
+        slideChange: function () {
+          const counter = document.getElementById('slide-counter');
+          if (counter) {
+            counter.textContent = (this.realIndex + 1) + ' / 6';
+          }
+        }
+      }
     });
   </script>
 
